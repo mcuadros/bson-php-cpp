@@ -5,7 +5,6 @@
 void fillBSONWithArray(const std::map<std::string,Php::Value>& value, bson_t* bson) {
   for (auto &iter : value) {
       const char* key = iter.first.c_str();
-      printf("key: %s\n", key);
       variantToBSON(iter.second, key, bson);
   }
 }
